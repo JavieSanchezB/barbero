@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+  <title>Landing Page del Peluquero y Barbero</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Estilos del encabezado */
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    /* Estilos del contenido principal */
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Estilos de la sección de información */
+    .info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .info img {
+      max-width: 200px;
+      border-radius: 50%;
+    }
+
+    .info p {
+      flex: 1;
+      margin-left: 20px;
+    }
+
+    /* Estilos del slider de cortes de cabello */
+    .slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      margin-bottom: 20px;
+    }
+
+    .slider img {
+      width: 300px;
+      scroll-snap-align: center;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    /* Animaciones */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100px);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    /* Clase para aplicar animación */
+    .animated {
+      animation-duration: 1s;
+      animation-fill-mode: both;
+    }
+
+    /* Agregar animación a elementos específicos */
+    .fadeIn {
+      animation-name: fadeIn;
+    }
+
+    .slideIn {
+      animation-name: slideIn;
+    }
+
+    /* Estilos adicionales */
+    h2 {
+      margin-top: 0;
+    }
+
+    .slider::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .slider::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+
+    .slider::-webkit-scrollbar-track {
+      background: #eee;
+    }
+
+        /* Estilos del botón de WhatsApp */
+        .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: #fff;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      font-size: 24px;
+      line-height: 60px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      z-index: 9999;
+    }
+  </style>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>Peluquero y Barbero</h1>
+  </header>
+
+  <div class="container">
+    <div class="info">
+      <img src="gustabo.png" alt="Peluquero y Barbero">
+      <p>
+        Gustavo, el barbero extraordinario, es reconocido por brindar un servicio excepcional a sus clientes. Su dedicación y pasión por su oficio lo distinguen en el mundo de la barbería. Con una atención personalizada y detallada, Gustavo se esfuerza por ofrecer a cada cliente una experiencia única y satisfactoria.
+
+       soy la elección perfecta. Su pasión, habilidad y dedicación te garantizan un corte de cabello impecable y una experiencia de cliente memorable. Confía en Gustavo para realzar tu estilo y hacerte lucir impecable en cada visita a su barbería.
+      </p>
+    </div>
+
+    <h2>Mis Trabajos</h2>
+
+    <div class="slider">
+      <img src="corte1.png" alt="Corte de cabello 1" class="animated fadeIn">
+      <img src="corte2.png" alt="Corte de cabello 2" class="animated fadeIn">
+      <img src="corte3.png" alt="Corte de cabello 3" class="animated fadeIn">
+      <img src="corte4.png" alt="Corte de cabello 4" class="animated fadeIn">
+    </div>
+  </div>
+  <a href="https://api.whatsapp.com/send?phone=3214198765" class="whatsapp-btn" target="_blank">
+    <i class="fab fa-whatsapp"></i> 
+  </a>
+  <script>
+    // Agregar animaciones al cargar la página
+    window.onload = function() {
+      var elements = document.getElementsByClassName("animated");
+      for (var i = 0; i < elements.length; i++) {
+        elements[i].style.animationDelay = i * 0.2 + "s";
+      }
+    };
+  </script>
+</body>
+</html>
